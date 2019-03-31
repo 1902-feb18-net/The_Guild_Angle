@@ -1,7 +1,7 @@
 
 export interface Request {
     'id': number;
-    'description': string;
+    'descript': string;
     'requirements': string;
     'reward'?: number;
     'progressId': number;

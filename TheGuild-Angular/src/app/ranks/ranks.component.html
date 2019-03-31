@@ -1,3 +1,11 @@
-<p>
-  ranks works!
-</p>
+<mat-card>
+  <mat-card-title>Ranks</mat-card-title>
+   <div *ngFor="let rank of ranks">
+     <mat-card>
+       <mat-card-title>{{rank.name}}, Fee: {{rank.fee}}</mat-card-title>
+       <mat-card-content>
+         <button mat-raised-button color= primary class="btn btn-primary" [routerLink]="['/ranks/', rank.id]"> Edit </button>
+       </mat-card-content>
+     </mat-card>
+   </div >
+ </mat-card>

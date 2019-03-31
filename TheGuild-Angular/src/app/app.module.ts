@@ -17,7 +17,9 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RanksComponent } from './ranks/ranks.component';
+import { RankService } from './_services/rank.service';
 import { RequestsComponent } from './requests/requests.component';
+import { RequestService } from './_services/request.service';
 
 
 @NgModule({
@@ -49,7 +51,9 @@ import { RequestsComponent } from './requests/requests.component';
    ],
    providers: [
       AuthService,
-      UserService
+      UserService,
+      RankService,
+      RequestService
    ],
    bootstrap: [
       AppComponent
