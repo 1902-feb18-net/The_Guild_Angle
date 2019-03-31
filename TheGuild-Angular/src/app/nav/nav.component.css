@@ -1,0 +1,11 @@
+.btn-primary{
+    margin-top: 1px;
+    margin-left: 5px;
+}
+.title{
+    margin-right: 10px;
+}
+
+.fill{
+    flex: 1 1 auto;
+}
