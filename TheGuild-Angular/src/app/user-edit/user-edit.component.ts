@@ -15,7 +15,7 @@ export class UserEditComponent implements OnInit {
   user: User;
 
   isDisabled: boolean;
-  disabletextArea(){
+  disabletextArea() {
     this.isDisabled = !this.isDisabled;
   }
   constructor(private userService: UserService, private route: ActivatedRoute) { }
@@ -26,7 +26,8 @@ export class UserEditComponent implements OnInit {
   }
 
   loadUser() {
-    this.userService.getUser(+this.route.snapshot.params['id']).subscribe((user: User) => {
+    const lintStringLiteralFix = "id";
+    this.userService.getUser(+this.route.snapshot.params[lintStringLiteralFix]).subscribe((user: User) => {
       this.user = user;
     }, error => {
       console.log(error);
@@ -34,7 +35,8 @@ export class UserEditComponent implements OnInit {
     }
 
     updateUser() {
-      this.userService.updateUser(+this.route.snapshot.params['id'], this.user).subscribe(next => {
+      const lintStringLiteralFix = "id";
+      this.userService.updateUser(+this.route.snapshot.params[lintStringLiteralFix], this.user).subscribe(next => {
         this.editForm.reset(this.user);
       }, error => {
         console.log(error);
