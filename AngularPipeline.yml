@@ -32,9 +32,9 @@ steps:
     scannerMode: CLI
   displayName: Prepare analysis on SonarCloud
 
-- script: npm run build-ci
+- script: npm run build
   workingDirectory: $(appDir)
-  displayName: npm run build-ci
+  displayName: npm run build
 
 - script: npm run lint
   workingDirectory: $(appDir)
