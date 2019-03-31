@@ -1,0 +1,30 @@
+<h1>Edit User</h1>
+<form #editForm="ngForm" (ngSubmit)= "updateUser()">
+<div class="form-group">
+    <label for="id">Id:</label> {{user.id}} <br>
+  <br>
+  <label for="firstName">First Name:</label><br>
+  <input class="form-control" type="string" name='firstName' [(ngModel)]="user.firstName"><br>
+  <label for="lastName">Last Name:</label><br>
+  <input class="form-control" type="string" name='lastName' [(ngModel)]="user.lastName"><br>
+  <label for="salary">Salary:</label><br>
+  <input class="form-control" type="number" name='salary' [(ngModel)]="user.salary"><br>
+  <label for="strength">Strength:</label><br>
+  <input class="form-control" type="number" name='strength' [(ngModel)]="user.strength"><br>
+  <label for="dex">Dex:</label><br>
+  <input class="form-control" type="number" name='dex' [(ngModel)]="user.dex"><br>
+  <label for="wisdom">Wisdom:</label><br>
+  <input class="form-control" type="number" name='wisdom' [(ngModel)]="user.wisdom"><br>
+  <label for="intelligence">Intelligence:</label><br>
+  <input class="form-control" type="number" name='intelligence' [(ngModel)]="user.intelligence"><br>
+  <label for="charisma">Charisma:</label><br>
+  <input class="form-control" type="number" name='charisma' [(ngModel)]="user.charisma"><br>
+  <label for="constitution">Constitution:</label><br>
+  <input class="form-control" type="number" name='constitution' [(ngModel)]="user.constitution"><br>
+  <label for="rankId">RankId:</label><br>
+  <input class="form-control" type="number" name='rankId' [(ngModel)]="user.rankId"><br>
+</div>
+<button class="btn btn-primary"> Save Changes </button>
+<button class="btn btn-primary" [routerLink]="['/users/']"> Cancel </button>
+
+</form>

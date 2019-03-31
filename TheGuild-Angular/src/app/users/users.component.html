@@ -1,0 +1,12 @@
+ 
+  <div *ngFor="let user of users">
+    <ul class="list-inline-item">
+      <li class="list-inline-item">
+          {{user.firstName}}
+        <button class="btn btn-primary" [routerLink]="['/users/', user.id]"> Details </button>
+      </li>
+    </ul>
+
+  </div >
+
+
