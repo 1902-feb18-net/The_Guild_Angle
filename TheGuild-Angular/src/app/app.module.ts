@@ -16,6 +16,8 @@ import { NavComponent } from './nav/nav.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RanksComponent } from './ranks/ranks.component';
+import { RequestsComponent } from './requests/requests.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       LoginComponent,
       UsersComponent,
       UserEditComponent,
-      NavComponent
+      NavComponent,
+      RanksComponent,
+      RequestsComponent
    ],
    imports: [
       BrowserModule,
