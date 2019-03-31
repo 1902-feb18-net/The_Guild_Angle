@@ -27,8 +27,6 @@ steps:
   inputs:
     SonarCloud: 1902-feb18-net_The_Guild_Angle
     organization: 1902-feb18-net
-    projectKey: 1902-feb18-net_The_Guild_Angle
-    projectName: The_Guild_Angular
     scannerMode: CLI
   displayName: Prepare analysis on SonarCloud
 
