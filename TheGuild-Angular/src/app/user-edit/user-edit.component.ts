@@ -13,14 +13,19 @@ import { NgForm } from '@angular/forms';
 export class UserEditComponent implements OnInit {
   @ViewChild('editForm') editForm: NgForm;
   user: User;
+
+  isDisabled: boolean;
+  disabletextArea(){
+    this.isDisabled = !this.isDisabled;
+  }
   constructor(private userService: UserService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.loadUser();
+    this.isDisabled = true;
   }
 
   loadUser() {
-// tslint:disable-next-line: no-string-literal
     this.userService.getUser(+this.route.snapshot.params['id']).subscribe((user: User) => {
       this.user = user;
     }, error => {
@@ -29,7 +34,6 @@ export class UserEditComponent implements OnInit {
     }
 
     updateUser() {
-// tslint:disable-next-line: no-string-literal
       this.userService.updateUser(+this.route.snapshot.params['id'], this.user).subscribe(next => {
         this.editForm.reset(this.user);
       }, error => {

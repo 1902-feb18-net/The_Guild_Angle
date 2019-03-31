@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+import { MatMenuModule, MatInputModule , MatButtonModule, MatFormFieldModule, MatTableModule , MatDialogModule,
+    MatIconModule, MatToolbarModule , MatCardModule} from '@angular/material';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrier';
@@ -14,8 +16,7 @@ import { NavComponent } from './nav/nav.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
    declarations: [
@@ -32,7 +33,15 @@ import {MatIconModule} from '@angular/material/icon';
       RouterModule.forRoot(appRoutes),
       BrowserAnimationsModule,
       MatFormFieldModule,
-      MatIconModule
+      MatIconModule,
+      MatMenuModule,
+      MatButtonModule,
+      MatToolbarModule,
+      MatCardModule,
+      MatDialogModule,
+      MatTableModule,
+      MatInputModule,
+      ReactiveFormsModule
    ],
    providers: [
       AuthService,

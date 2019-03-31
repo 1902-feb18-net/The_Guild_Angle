@@ -6,11 +6,11 @@
     <input type="password" [(ngModel)]="login.password"
       placeholder="Password" required name="password" />
       <br>
-    <button type="submit">Login</button>
+    <button mat-raised-button color= primary type="submit">Login</button>
 </form>
 
 <div *ngIf="loggedIn()">
-<button type="submit" (click)="logout()">Log out</button>
+<button mat-raised-button color= primary type="submit" (click)="logout()">Log out</button>
 </div>
 
   

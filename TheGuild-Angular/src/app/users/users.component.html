@@ -1,12 +1,11 @@
- 
+<mat-card>
+ <mat-card-title>Users</mat-card-title>
   <div *ngFor="let user of users">
-    <ul class="list-inline-item">
-      <li class="list-inline-item">
-          {{user.firstName}}
-        <button class="btn btn-primary" [routerLink]="['/users/', user.id]"> Details </button>
-      </li>
-    </ul>
-
+    <mat-card>
+      <mat-card-title>{{user.firstName}} {{user.lastName}} </mat-card-title>
+      <mat-card-content>
+        <button mat-raised-button color= primary class="btn btn-primary" [routerLink]="['/users/', user.id]"> Edit </button>
+      </mat-card-content>
+    </mat-card>
   </div >
-
-
+</mat-card>
