@@ -1,12 +1,16 @@
 <form *ngIf="!loggedIn()" (ngSubmit)="onSubmit()">
 
-    <input type="text" [(ngModel)]="login.username"
+  <label for="username">Username: </label>
+  <mat-form-field appearance="outline">
+    <input matInput type="text" [(ngModel)]="login.username"
       placeholder="Username" required name="username" />
-      <br>
-    <input type="password" [(ngModel)]="login.password"
+  </mat-form-field><br>
+  <label for="password">Password: </label>
+  <mat-form-field appearance="outline">
+    <input matInput type="password" [(ngModel)]="login.password"
       placeholder="Password" required name="password" />
-      <br>
-    <button mat-raised-button color= primary type="submit">Login</button>
+  </mat-form-field><br>
+  <button mat-raised-button color= primary type="submit">Login</button>
 </form>
 
 <div *ngIf="loggedIn()">
