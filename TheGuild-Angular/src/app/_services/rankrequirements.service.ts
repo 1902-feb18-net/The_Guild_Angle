@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Rankrequirements } from '../_models/Rankrequirements';
+import { Rankrequirements } from '../_models/rankrequirements';
 
 @Injectable({
   providedIn: 'root'

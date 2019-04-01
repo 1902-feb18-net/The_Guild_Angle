@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RequestinggroupService } from '../_services/Requestinggroup.service';
-import { Requestinggroup } from '../_models/Requestinggroup';
+import { RequestinggroupService } from '../_services/requestinggroup.service';
+import { Requestinggroup } from '../_models/requestinggroup';
 
 @Component({
   selector: 'app-requestinggroup',
