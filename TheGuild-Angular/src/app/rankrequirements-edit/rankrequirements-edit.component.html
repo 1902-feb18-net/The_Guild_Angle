@@ -1,0 +1,29 @@
+<h1>Edit Rank Requirement</h1>
+<form #editForm="ngForm" (ngSubmit)= "updateRankrequirement()">
+<div class="form-group">
+
+    <label for="id">id: </label>
+    <mat-form-field appearance="outline">
+        <input matInput [disabled]="isDisabled" class="form-control" type="string" name='id' [(ngModel)]="rankrequirements.id"><br>
+    </mat-form-field><br>
+  <label for="currentRankId">Current Rank Id: </label>
+  <mat-form-field appearance="outline">
+      <input matInput class="form-control" type="number" name='currentRankId' [(ngModel)]="rankrequirements.currentRankId"><br>
+  </mat-form-field ><br>
+  <label for="nextRankId">Next Rank Id: </label>
+  <mat-form-field appearance="outline">
+      <input matInput class="form-control" type="number" name='nextRankId' [(ngModel)]="rankrequirements.nextRankId"><br>
+  </mat-form-field ><br>
+  <label for="numberRequests">Number of Requests: </label>
+  <mat-form-field appearance="outline">
+      <input matInput class="form-control" type="number" name='numberRequests' [(ngModel)]="rankrequirements.numberRequests"><br>
+  </mat-form-field ><br>
+  <label for="minTotalStats">Minimum Total Stats: </label>
+  <mat-form-field appearance="outline">
+      <input matInput class="form-control" type="number" name='minTotalStats' [(ngModel)]="rankrequirements.minTotalStats"><br>
+  </mat-form-field ><br>
+</div>
+<button mat-raised-button color= primary class="btn btn-primary"> Save Changes </button>
+<button mat-raised-button color= primary class="btn btn-primary" [routerLink]="['/users/']"> Cancel </button>
+
+</form>

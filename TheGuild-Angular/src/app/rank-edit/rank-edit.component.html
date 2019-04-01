@@ -1,0 +1,21 @@
+<h1>Edit Rank</h1>
+<form #editForm="ngForm" (ngSubmit)= "updateRank()">
+<div class="form-group">
+  
+    <label for="id">id: </label>
+    <mat-form-field appearance="outline">
+        <input matInput [disabled]="isDisabled" class="form-control" type="string" name='id' [(ngModel)]="rank.id"><br>
+    </mat-form-field><br>
+  <label for="name">Name: </label>
+  <mat-form-field appearance="outline">
+      <input matInput class="form-control" type="string" name='name' [(ngModel)]="rank.name"><br>
+  </mat-form-field><br>
+  <label for="fee">Fee: </label>
+  <mat-form-field appearance="outline">
+      <input matInput class="form-control" type="number" name='fee' [(ngModel)]="rank.fee"><br>
+  </mat-form-field ><br>
+</div>
+<button mat-raised-button color= primary class="btn btn-primary"> Save Changes </button>
+<button mat-raised-button color= primary class="btn btn-primary" [routerLink]="['/users/']"> Cancel </button>
+
+</form>

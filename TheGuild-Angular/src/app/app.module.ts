@@ -28,6 +28,8 @@ import { AdventurerpartyComponent } from './adventurerparty/adventurerparty.comp
 import { RequestinggroupComponent } from './requestinggroup/requestinggroup.component';
 import { AdventurerpartyService } from './_services/adventurerparty.service';
 import { RequestinggroupService } from './_services/requestinggroup.service';
+import { RankEditComponent } from './rank-edit/rank-edit.component';
+import { RankrequirementsEditComponent } from './rankrequirements-edit/rankrequirements-edit.component';
 
 @NgModule({
    declarations: [
@@ -41,7 +43,9 @@ import { RequestinggroupService } from './_services/requestinggroup.service';
       ProgressComponent,
       RankrequirementsComponent,
       AdventurerpartyComponent,
-      RequestinggroupComponent
+      RequestinggroupComponent,
+      RankEditComponent,
+      RankrequirementsEditComponent,
    ],
    imports: [
       BrowserModule,

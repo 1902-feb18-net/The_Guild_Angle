@@ -3,9 +3,6 @@
    <div *ngFor="let request of requests">
      <mat-card>
        <mat-card-title>Description: {{request.descript}} Requirements: {{request.requirements}} </mat-card-title>
-       <mat-card-content>
-         <button mat-raised-button color= primary class="btn btn-primary" [routerLink]="['/requests/', request.id]"> Edit </button>
-       </mat-card-content>
      </mat-card>
    </div >
  </mat-card>

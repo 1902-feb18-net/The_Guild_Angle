@@ -8,19 +8,21 @@ import { AdventurerpartyComponent } from './adventurerparty/adventurerparty.comp
 import { RequestinggroupComponent } from './requestinggroup/requestinggroup.component';
 import { ProgressComponent } from './progress/progress.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
+import { RankEditComponent } from './rank-edit/rank-edit.component';
+import { RankrequirementsEditComponent } from './rankrequirements-edit/rankrequirements-edit.component';
 
 export const appRoutes: Routes = [
     { path: 'login', component: LoginComponent},
     { path: 'users', component: UsersComponent},
     { path: 'users/:id', component: UserEditComponent},
     { path: 'ranks', component: RanksComponent},
-    // { path: 'ranks/:id', component: RanksEditComponent},
+    { path: 'ranks/:id', component: RankEditComponent},
     { path: 'rankrequirements', component: RankrequirementsComponent},
-    // { path: 'rankrequirements/:id', component: RankrequirementsEditComponent},
+    { path: 'rankrequirements/:id', component: RankrequirementsEditComponent},
     { path: 'requests', component: RequestsComponent},
     { path: 'adventurerparty', component: AdventurerpartyComponent},
     { path: 'requestinggroup', component: RequestinggroupComponent},
-    // { path: 'requests/:id', component: RequestsComponent},
+    // { path: 'requests/:id', component: RequestsEditComponent},
     { path: 'progresses', component: ProgressComponent},
 ];
 
