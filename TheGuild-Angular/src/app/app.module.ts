@@ -16,7 +16,12 @@ import { NavComponent } from './nav/nav.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { JwtModule } from '@auth0/angular-jwt';
+import {MatSelectModule} from '@angular/material'
 
+export function tokenGetter() {
+   return localStorage.getItem('token');
+}
 
 @NgModule({
    declarations: [
@@ -41,7 +46,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       MatDialogModule,
       MatTableModule,
       MatInputModule,
-      ReactiveFormsModule
+      MatSelectModule,
+      ReactiveFormsModule,
+      JwtModule.forRoot({
+         config: {
+            tokenGetter: tokenGetter,
+            whitelistedDomains: ['localhost:4200'],
+            blacklistedRoutes: ['localhost:4200/api/account']
+         }
+      }),
    ],
    providers: [
       AuthService,

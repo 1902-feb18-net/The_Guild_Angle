@@ -4,6 +4,7 @@ import { User } from '../_models/user';
 import { UserService } from '../_services/user.service';
 import { ActivatedRoute } from '@angular/router';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-edit',
@@ -18,7 +19,7 @@ export class UserEditComponent implements OnInit {
   disabletextArea(){
     this.isDisabled = !this.isDisabled;
   }
-  constructor(private userService: UserService, private route: ActivatedRoute) { }
+  constructor(private userService: UserService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.loadUser();
@@ -36,6 +37,7 @@ export class UserEditComponent implements OnInit {
     updateUser() {
       this.userService.updateUser(+this.route.snapshot.params['id'], this.user).subscribe(next => {
         this.editForm.reset(this.user);
+        this.router.navigate(['/users'])
       }, error => {
         console.log(error);
       });
