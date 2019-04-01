@@ -12,12 +12,11 @@ export class NavComponent implements OnInit {
   constructor(private api: UserService, private router: Router) { }
 
   ngOnInit() {
-    this.logout();
   }
 
-  logout() {
+  /*logout() {
     sessionStorage.removeItem('account');
     console.log('logged out');
     this.router.navigate(['/login']);
-  }
+  }*/
 }
