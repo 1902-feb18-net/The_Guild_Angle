@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-title>RankRequirements</mat-card-title>
+   <div *ngFor="let rankrequirement of rankrequirements">
+     <mat-card>
+       <mat-card-title>Number of requests: {{rankrequirement.numberRequests}}, Minimum Total Stats: {{rankrequirement.minTotalStats}}</mat-card-title>
+       <mat-card-content>
+         <button mat-raised-button color= primary class="btn btn-primary" [routerLink]="['/rankrequirements/', rankrequirement.id]"> Edit </button>
+       </mat-card-content>
+     </mat-card>
+   </div >
+ </mat-card>

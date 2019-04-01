@@ -16,12 +16,20 @@ import { NavComponent } from './nav/nav.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { JwtModule } from '@auth0/angular-jwt';
-import {MatSelectModule} from '@angular/material'
-
-export function tokenGetter() {
-   return localStorage.getItem('token');
-}
+import { RanksComponent } from './ranks/ranks.component';
+import { RankService } from './_services/rank.service';
+import { RequestsComponent } from './requests/requests.component';
+import { RequestService } from './_services/request.service';
+import { ProgressComponent } from './progress/progress.component';
+import { ProgressService } from './_services/progress.service';
+import { RankrequirementsComponent } from './rankrequirements/rankrequirements.component';
+import { RankrequirementsService } from './_services/rankrequirements.service';
+import { AdventurerpartyComponent } from './adventurerparty/adventurerparty.component';
+import { RequestinggroupComponent } from './requestinggroup/requestinggroup.component';
+import { AdventurerpartyService } from './_services/adventurerparty.service';
+import { RequestinggroupService } from './_services/requestinggroup.service';
+import { RankEditComponent } from './rank-edit/rank-edit.component';
+import { RankrequirementsEditComponent } from './rankrequirements-edit/rankrequirements-edit.component';
 
 @NgModule({
    declarations: [
@@ -29,7 +37,15 @@ export function tokenGetter() {
       LoginComponent,
       UsersComponent,
       UserEditComponent,
-      NavComponent
+      NavComponent,
+      RanksComponent,
+      RequestsComponent,
+      ProgressComponent,
+      RankrequirementsComponent,
+      AdventurerpartyComponent,
+      RequestinggroupComponent,
+      RankEditComponent,
+      RankrequirementsEditComponent,
    ],
    imports: [
       BrowserModule,
@@ -46,19 +62,17 @@ export function tokenGetter() {
       MatDialogModule,
       MatTableModule,
       MatInputModule,
-      MatSelectModule,
       ReactiveFormsModule,
-      JwtModule.forRoot({
-         config: {
-            tokenGetter: tokenGetter,
-            whitelistedDomains: ['localhost:4200'],
-            blacklistedRoutes: ['localhost:4200/api/account']
-         }
-      }),
    ],
    providers: [
       AuthService,
-      UserService
+      UserService,
+      RankService,
+      RequestService,
+      ProgressService,
+      RankrequirementsService,
+      AdventurerpartyService,
+      RequestinggroupService
    ],
    bootstrap: [
       AppComponent
