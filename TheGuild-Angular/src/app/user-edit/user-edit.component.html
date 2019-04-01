@@ -6,6 +6,10 @@
     <mat-form-field appearance="outline">
         <input matInput [disabled]="isDisabled" class="form-control" type="string" name='id' [(ngModel)]="user.id"><br>
     </mat-form-field><br>
+    <label for="userName">Username: </label>
+    <mat-form-field appearance="outline">
+        <input matInput [disabled]="isDisabled" class="form-control" type="string" name='userName' [(ngModel)]="user.userName"><br>
+    </mat-form-field><br>
   <label for="firstName">First Name: </label>
   <mat-form-field appearance="outline">
       <input matInput class="form-control" type="string" name='firstName' [(ngModel)]="user.firstName"><br>
