@@ -39,7 +39,7 @@ export class UserEditComponent implements OnInit {
       const lintStringLiteralFix = 'id';
       this.userService.updateUser(+this.route.snapshot.params[lintStringLiteralFix], this.user).subscribe(next => {
         this.editForm.reset(this.user);
-        this.router.navigate(['/users'])
+        this.router.navigate(['/users']);
       }, error => {
         console.log(error);
       });

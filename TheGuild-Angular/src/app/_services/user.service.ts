@@ -37,7 +37,7 @@ getUsers(): Observable<User[]> {
 getUser(id): Observable<User> {
   const baseUrl = environment.apiUrl;
   console.log(`Making request at API url ${baseUrl}`);
-  const url = `${baseUrl}api/users/`+ id;
+  const url = `${baseUrl}api/users/` + id;
   return this.httpClient.get<User>(url, { withCredentials: true });
 }
 
@@ -48,9 +48,9 @@ getUser(id): Observable<User> {
 updateUser(id: number, user: User) {
   const baseUrl = environment.apiUrl;
   console.log(`Making request at API url ${baseUrl}`);
-  const url = `${baseUrl}api/users/`+ id;
-  return this.httpClient.put<User>(url,user, { withCredentials: true });
-  //return this.httpClient.put(this.baseUrl + 'api/users/' + id, user);
+  const url = `${baseUrl}api/users/` + id;
+  return this.httpClient.put<User>(url, user, { withCredentials: true });
+  // return this.httpClient.put(this.baseUrl + 'api/users/' + id, user);
 }
 
 async login(login: Login): Promise<Account> {
