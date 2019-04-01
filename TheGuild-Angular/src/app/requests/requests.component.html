@@ -1,0 +1,8 @@
+<mat-card>
+  <mat-card-title>Requests</mat-card-title>
+   <div *ngFor="let request of requests">
+     <mat-card>
+       <mat-card-title>Description: {{request.descript}} Requirements: {{request.requirements}} </mat-card-title>
+     </mat-card>
+   </div >
+ </mat-card>

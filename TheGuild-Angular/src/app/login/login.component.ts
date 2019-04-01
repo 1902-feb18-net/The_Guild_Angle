@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
 import { Login } from '../_models/login';
 import { Router } from '@angular/router';
+import { UserService } from '../_services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -12,18 +13,17 @@ export class LoginComponent implements OnInit {
 
   login: Login = new Login();
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private api: UserService, private router: Router) { }
 
   ngOnInit() {
   }
 
   onSubmit() {
-    this.authService.login(this.login).subscribe(next => {
-      console.log('Logged in succesfully');
-    }, error => {
-      console.log('Failed to login');
-    }, () => {
+    this.api.login(this.login).then(() => {
       this.router.navigate(['/users']);
+    },
+    error => {
+      console.log(error);
     });
   }
 
@@ -32,9 +32,5 @@ export class LoginComponent implements OnInit {
   return !!token;
 }
 
-logout() {
-  localStorage.removeItem('token');
-  console.log('logged out');
-  this.router.navigate(['/login']);
-}
+
 }
