@@ -22,6 +22,7 @@ getRequest(id): Observable<Request> {
   return this.http.get<Request>(this.baseUrl + this.requestUrl + id);
 }
 
+// technically don't need this
 updateRequest(id: number, request: Request) {
   return this.http.put(this.baseUrl + this.requestUrl + id, request);
 }

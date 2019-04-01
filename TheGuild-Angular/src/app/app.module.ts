@@ -20,7 +20,14 @@ import { RanksComponent } from './ranks/ranks.component';
 import { RankService } from './_services/rank.service';
 import { RequestsComponent } from './requests/requests.component';
 import { RequestService } from './_services/request.service';
-
+import { ProgressComponent } from './progress/progress.component';
+import { ProgressService } from './_services/progress.service';
+import { RankrequirementsComponent } from './rankrequirements/rankrequirements.component';
+import { RankrequirementsService } from './_services/rankrequirements.service';
+import { AdventurerpartyComponent } from './adventurerparty/adventurerparty.component';
+import { RequestinggroupComponent } from './requestinggroup/requestinggroup.component';
+import { AdventurerpartyService } from './_services/adventurerparty.service';
+import { RequestinggroupService } from './_services/requestinggroup.service';
 
 @NgModule({
    declarations: [
@@ -30,7 +37,11 @@ import { RequestService } from './_services/request.service';
       UserEditComponent,
       NavComponent,
       RanksComponent,
-      RequestsComponent
+      RequestsComponent,
+      ProgressComponent,
+      RankrequirementsComponent,
+      AdventurerpartyComponent,
+      RequestinggroupComponent
    ],
    imports: [
       BrowserModule,
@@ -47,13 +58,17 @@ import { RequestService } from './_services/request.service';
       MatDialogModule,
       MatTableModule,
       MatInputModule,
-      ReactiveFormsModule
+      ReactiveFormsModule,
    ],
    providers: [
       AuthService,
       UserService,
       RankService,
-      RequestService
+      RequestService,
+      ProgressService,
+      RankrequirementsService,
+      AdventurerpartyService,
+      RequestinggroupService
    ],
    bootstrap: [
       AppComponent

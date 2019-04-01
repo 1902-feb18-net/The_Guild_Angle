@@ -1,0 +1,8 @@
+<mat-card>
+  <mat-card-title>Requesting Groups</mat-card-title>
+   <div *ngFor="let requestinggroup of requestinggroups">
+     <mat-card>
+       <mat-card-title>Customer: {{requestinggroup.customerId}}, Request: {{requestinggroup.requestId}}</mat-card-title>
+     </mat-card>
+   </div >
+ </mat-card>
